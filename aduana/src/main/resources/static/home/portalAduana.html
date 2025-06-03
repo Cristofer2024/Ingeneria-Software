@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Aduana de Chile</title>
+    <link rel="stylesheet" href="Style_usuario_home.css">
+</head>
+<body>
+    <div class="home-container">
+        <h1>Bienvenido al Portal de la Aduana de Chile</h1>
+
+        <!-- Simulación de tipo de usuario -->
+        <div class="rol-selector">
+            <label for="rol">Seleccione su tipo de usuario:</label>
+            <select id="rol" onchange="mostrarOpciones()">
+                <option value="padre">Padre / Representante Legal</option>
+                <option value="viajero">Viajero</option>
+                <option value="funcionario">Funcionario de Aduanas</option>
+                <option value="pasajero">Pasajero</option>
+                <option value="sag">Funcionario SAG / PDI</option>
+                <option value="analista">Analista de Datos</option>
+                <option value="usuario">Usuario General</option>
+            </select>
+        </div>
+
+        <div id="opciones" class="opciones"></div>
+    </div>
+
+    <script>
+        const opcionesPorRol = {
+            padre: [
+                "Registrar representante legal",
+                "Crear documentación para salida/entrada de menor",
+                "Editar y consultar documentos",
+                "Notificación de errores"
+            ],
+            viajero: [
+                "Registrar como viajero",
+                "Crear documentación del vehículo",
+                "Consultar y editar documentos",
+                "Notificación de errores"
+            ],
+            funcionario: [
+                "Consultar vehículos de países limítrofes",
+                "Enviar/recibir documentos",
+                "Actualizar protocolos",
+                "Generar reportes internacionales"
+            ],
+            pasajero: [
+                "Registro previo",
+                "Ver tiempos de espera",
+                "Asignación de carril rápido",
+                "Soporte en línea"
+            ],
+            sag: [
+                "Registrar inspecciones",
+                "Verificación de documentos",
+                "Notificación de anomalías",
+                "Acceder a historial de inspecciones"
+            ],
+            analista: [
+                "Configurar parámetros de informes",
+                "Ver panel en tiempo real",
+                "Comparar ingresos/egresos",
+                "Detectar anomalías"
+            ],
+            usuario: [
+                "Iniciar/cerrar sesión",
+                "Recuperar contraseña",
+                "Enviar soporte",
+                "Consultar información"
+            ]
+        };
+
+        function mostrarOpciones() {
+            const rol = document.getElementById("rol").value;
+            const contenedor = document.getElementById("opciones");
+            const items = opcionesPorRol[rol] || [];
+            contenedor.innerHTML = "<h2>Funciones disponibles:</h2><ul>" +
+                items.map(item => `<li>${item}</li>`).join("") +
+                "</ul>";
+        }
+
+        window.onload = mostrarOpciones;
+    </script>
+</body>
+</html>

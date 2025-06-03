@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <link rel="stylesheet" href="formulario.css"> <!-- Archivo CSS externo -->
+</head>
+<body>
+    <!-- Contenedor del formulario -->
+    <div class="container">
+        <h2>Formulario de Registro</h2>
+        <form id="registroForm">
+            <label for="tipoUsuario">Tipo de Usuario:</label>
+            <select id="tipoUsuario" onchange="actualizarFormulario()"> <!-- Se actualiza dinámicamente -->
+                <option value="admin">Admin</option>
+                <option value="viajero">Viajero</option>
+                <option value="funcionario">Funcionario Aduana</option>
+            </select>
+
+            <!-- Campos comunes a todos los usuarios -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="rut">RUT:</label>
+            <input type="text" id="rut" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" required>
+
+            <div id="camposExtra"></div> <!-- Contenedor donde se agregarán los campos dinámicos -->
+
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+
+    <!-- Contenedor para mensajes flotantes -->
+    <div id="mensaje"></div>
+
+    <script src="formulario.js"></script> <!-- Archivo JavaScript externo -->
+</body>
+</html>

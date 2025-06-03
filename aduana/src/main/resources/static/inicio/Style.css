@@ -1,0 +1,198 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f2f2f2;
+}
+.header {
+    background: white;
+    color: #002f6c;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav a {
+    margin: 0 10px;
+    color: #002f6c;
+    text-decoration: none;
+}
+.hero {
+    background: url('/img/aeropuerto.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+.info-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
+}
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+.btn.rojo { background: #e63946; }
+.btn.amarillo { background: #f1c40f; }
+.btn.verde { background: #27ae60; }
+.btn.azul { background: #2980b9; }
+.noticias {
+    padding: 20px;
+}
+.grid {
+    display: flex;
+    gap: 20px;
+}
+.noticias {
+    padding: 30px;
+    background: #ffffff;
+}
+
+.noticias h2 {
+    text-align: center;
+    color: #002f6c;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.noticia {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.noticia img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.noticia p {
+    font-size: 14px;
+    color: #333;
+}
+
+.hero-slider {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fade 15s infinite;
+    z-index: 1; /* Detrás del texto */
+}
+
+.fade1 {
+    background-image: url("../imagenes/aduana_inicio1.jpg");
+    animation-delay: 0s;
+}
+.fade2 {
+    background-image: url("../imagenes/aduana_inicio2.jpg");
+    animation-delay: 5s;
+}
+.fade3 {
+    background-image: url("../imagenes/aduana_inicio3jpg.jpg");
+    animation-delay: 10s;
+}
+
+@keyframes fade {
+    0%   { opacity: 0; }
+    10%  { opacity: 1; }
+    30%  { opacity: 1; }
+    40%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2; /* Siempre encima de las imágenes */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+.logo {
+    width: 150px; /* Ajusta el tamaño según lo necesites */
+    height: auto;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #002f6c;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 30px;
+    flex-wrap: wrap;
+    font-size: 14px;
+
+}
+
+.footer-column {
+    flex: 1 1 250px;
+    margin: 10px;
+    border-right: 3px solid white; /* Puedes cambiar el grosor, el color y el tipo de borde */
+}
+
+.footer-logo {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    margin: 5px 0;
+}
+
+.social-links img {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.aptus-seal {
+    margin-top: 20px;
+    width: 60px;
+}
+
+.map-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #aeeaff;
+}
