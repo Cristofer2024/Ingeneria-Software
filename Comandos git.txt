@@ -1,0 +1,21 @@
+//Clonar repositorio
+git clone https://github.com/Cristofer2024/Ingeneria-Software
+
+//traemos los últimos cambios
+git pull
+
+//Crear rama nueva
+git checkout -b nombre_rama
+
+//Cambiar de rama desde comando
+git checkout nombre_rama
+
+//Subimos nuestros cambios (preparación, confirmación y actualización de rama remota)
+git add .
+git commit -m "descripción"
+git push
+
+// Validación y Fusión de Cambios en la Rama Principal
+git checkout main --> cambio de rama a la principal
+git merge nombre_rama --> actualiza la rama principal con los cambios de la rama secundaria.
+git push --> sube los cambios al repositorio remoto
