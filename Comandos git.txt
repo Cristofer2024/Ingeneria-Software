@@ -1,4 +1,4 @@
-//Clonar repositorio
+ //Clonar repositorio
 git clone https://github.com/Cristofer2024/Ingeneria-Software
 
 //traemos los últimos cambios
@@ -19,3 +19,6 @@ git push
 git checkout main --> cambio de rama a la principal
 git merge nombre_rama --> actualiza la rama principal con los cambios de la rama secundaria.
 git push --> sube los cambios al repositorio remoto
+
+// Agregar una rama secundaria al repositorio remoto
+git push --set-upstream origin secundaria
