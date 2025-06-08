@@ -13,7 +13,7 @@ git checkout nombre_rama
 //Subimos nuestros cambios (preparación, confirmación y actualización de rama remota)
 git add .
 git commit -m "descripción"
-git push
+git push origin nombre-rama
 
 // Validación y Fusión de Cambios en la Rama Principal
 git checkout main --> cambio de rama a la principal
@@ -21,4 +21,4 @@ git merge nombre_rama --> actualiza la rama principal con los cambios de la rama
 git push --> sube los cambios al repositorio remoto
 
 // Agregar una rama secundaria al repositorio remoto
-git push --set-upstream origin secundaria
+git push --set-upstream origin rama_secundaria 
