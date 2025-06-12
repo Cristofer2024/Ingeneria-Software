@@ -1,0 +1,43 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 40px;
+}
+
+.home-container {
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #0033A0;
+}
+
+.rol-selector {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.rol-selector label {
+    font-weight: bold;
+}
+
+.opciones {
+    margin-top: 30px;
+}
+
+.opciones ul {
+    list-style: none;
+    padding: 0;
+}
+
+.opciones li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}

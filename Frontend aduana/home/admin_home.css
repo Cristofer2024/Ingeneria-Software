@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('../imagenes/fondo2.png') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 32, 64, 0.6); /* filtro oscuro */
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 50px;
+  text-align: center;
+  color: white;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #005BAA;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #003f7f;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #002f6c;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    margin-top: 100px;
+
+}
+
+.footer-column {
+    flex: 1 1 250px;
+    margin: 10px;
+    border-right: 3px solid white; /* Puedes cambiar el grosor, el color y el tipo de borde */
+}
+
+.footer-logo {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    margin: 5px 0;
+}
+
+.social-links img {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.aptus-seal {
+    margin-top: 20px;
+    width: 60px;
+}
+
+.map-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #aeeaff;
+}
+
+.cerrar-sesion {
+  background-color: #dc3545;
+  color: white;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.cerrar-sesion:hover {
+  background-color: #b02a37;
+}

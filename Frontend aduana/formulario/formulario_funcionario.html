@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Funcionarios</title>
+    <link rel="stylesheet" href="formulario.css"> <!-- Archivo CSS externo -->
+</head>
+<body>
+    <div class="main-content">
+        <!-- Contenedor del formulario -->
+        <div class="container">
+            <img src="../imagenes/logo.png" alt="Logo Aduanas de Chile" class="logo">
+            <h2>Funcionario Aduana</h2>
+            <h2>Formulario de Registro</h2>
+            <form id="registroForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+                <label for="rut">RUT:</label>
+                <input type="text" id="rut"placeholder="12345678-k" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="password" required>
+                <label for="especialidad">Especialidad:</label>
+                <input type="text" id="especialidad" required>
+                <label for="organismo">Organismo:</label>
+                <select id="organismo">
+                <option value="Aduana">Aduana</option>
+                <option value="SAG">SAG</option>
+                <option value="PDI">PDI</option>
+            </select>
+
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

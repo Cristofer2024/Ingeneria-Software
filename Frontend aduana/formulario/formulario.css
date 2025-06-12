@@ -1,0 +1,84 @@
+/* Estilo base del cuerpo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: url('../imagenes/fondo2.png') no-repeat center center fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Contenedor del formulario */
+.container {
+    background: rgba(255, 255, 255, 0.15); /* Fondo blanco semitransparente */
+    backdrop-filter: blur(10px);          /* Efecto de desenfoque */
+    -webkit-backdrop-filter: blur(10px);  /* Compatibilidad con Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    color: #fff;
+    margin: 20px 20px;
+}
+
+
+/* Título del formulario */
+.container h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #002664;
+    border-bottom: 2px solid #cc0000;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Etiquetas */
+label {
+    display: block;
+    margin: 15px 0 5px;
+    text-align: left;
+    font-weight: bold;
+    color: #002664;
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Botón de enviar */
+button[type="submit"] {
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #a00000;
+}
+
+
+
