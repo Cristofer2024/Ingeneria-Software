@@ -7,7 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 /* Contenedor del formulario */
@@ -23,7 +23,7 @@ body {
     max-width: 90%;
     text-align: center;
     color: #fff;
-    margin-top: 20px;
+    margin: 20px 20px;
 }
 
 
@@ -32,9 +32,10 @@ body {
     margin-bottom: 20px;
     font-size: 26px;
     color: #002664;
-    border-bottom: 2px solid #cc0000;
-    display: inline-block;
+    /* border-bottom: 2px solid #cc0000; */
+    display: flexbox;
     padding-bottom: 5px;
+    text-decoration: underline #cc0000;
 }
 
 /* Etiquetas */
@@ -80,57 +81,5 @@ button[type="submit"]:hover {
     background-color: #a00000;
 }
 
-/* Contenedor de campos extra dinámicos */
-#camposExtra {
-    margin-top: 10px;
-}
 
-/* Estilo de mensajes flotantes */
-#mensaje {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    z-index: 9999;
-}
 
-/* Mostrar mensaje */
-#mensaje.show {
-    display: block;
-    opacity: 1;
-}
-
-/* Ocultar mensaje */
-#mensaje.hide {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-/* Estilos por tipo */
-#mensaje.success {
-    background-color: #4caf50;
-    color: white;
-}
-
-#mensaje.error {
-    background-color: #f44336;
-    color: white;
-}
-
-#mensaje.info {
-    background-color: #2196f3;
-    color: white;
-}
-
-/* Contenedor principal con margen superior */
-.main-content {
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}

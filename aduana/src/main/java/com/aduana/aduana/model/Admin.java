@@ -33,4 +33,7 @@ public class Admin {
     @NotNull
     private String password;
 
+    @NotNull
+    private String nivelAcceso;
+
 }

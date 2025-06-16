@@ -71,7 +71,7 @@ public class DataLoader implements CommandLineRunner {
         .rut(faker.idNumber().valid())
         .email(faker.internet().emailAddress())
         .password(faker.internet().password())
-        .especialidad(faker.job().title())
+        .cargo(faker.job().title())
         .organismo(List.of("Aduana", "SAG", "PDI").get(new Random().nextInt(3)))
         .build();
 

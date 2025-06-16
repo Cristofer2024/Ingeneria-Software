@@ -35,7 +35,7 @@ public class FuncionarioAduana {
     private String password;
 
     @NotNull
-    private String especialidad;
+    private String cargo;
 
     @NotNull
     private String organismo;

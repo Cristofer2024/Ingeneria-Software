@@ -1,6 +1,8 @@
 package com.aduana.aduana.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.aduana.aduana.model.Viajero;
@@ -25,9 +27,12 @@ public class ViajeroController {
     }
 
     @PostMapping
-    public Viajero createViajero(@RequestBody Viajero viajero) {
-        return viajeroService.save(viajero);
-    }
+    public ResponseEntity<?> createViajero(@RequestBody Viajero viajero) {
+        if (viajeroService.existePorRut(viajero.getRut())) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("RUT duplicado");
+        }
+        return ResponseEntity.ok(viajeroService.save(viajero));
+}
 
     @PutMapping("/{id}")
     public Viajero updateViajero(@PathVariable Integer id, @RequestBody Viajero viajero) {
