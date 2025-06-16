@@ -2,7 +2,6 @@ package com.aduana.aduana.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import com.aduana.aduana.model.Admin;
 import com.aduana.aduana.service.AdminService;
 
@@ -23,10 +22,6 @@ public class AdminController {
     public Admin getAdminById(@PathVariable Long id) {
         return adminService.findById(id);
     }
-    // @PostMapping
-    // public String registrarAdmin(@RequestBody Admin admin) {
-    //     System.out.println("Nuevo Admin registrado: " + admin);
-    //     return "Admin registrado correctamente!";
     
     @PostMapping
     public Admin createAdmin(@RequestBody Admin admin) {
