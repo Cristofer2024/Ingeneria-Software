@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     confirmButtonText: "Ir al panel"
                 }).then(result => {
                     if (result.isConfirmed) {
-                        window.location.href = "../home/admin/funcionario"; // Página destino
+                        window.location.href = "../home/admin_home.html"; // Página destino
                     }
                 });
                 form.reset();

@@ -31,19 +31,31 @@ public class LoginController {
 
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest login) {
-        Optional<Admin> admin = adminRepo.findByRutAndPassword(login.getRut(), login.getPassword());
-        if (admin.isPresent()) {
-            return ResponseEntity.ok(Map.of("rol", "admin"));
-        }
+        String rut = login.getRut();
+        String password = login.getPassword();
+        String rol = login.getRol();
 
-        Optional<FuncionarioAduana> funcionario = funcionarioRepo.findByRutAndPassword(login.getRut(), login.getPassword());
-        if (funcionario.isPresent()) {
-            return ResponseEntity.ok(Map.of("rol", "funcionario"));
-        }
-
-        Optional<Viajero> viajero = viajeroRepo.findByRutAndPassword(login.getRut(), login.getPassword());
-        if (viajero.isPresent()) {
-            return ResponseEntity.ok(Map.of("rol", "viajero"));
+        switch (rol.toLowerCase()) {
+            case "admin":
+                Optional<Admin> admin = adminRepo.findByRutAndPassword(rut, password);
+                if (admin.isPresent()) {
+                    return ResponseEntity.ok(Map.of("rol", "admin"));
+                }
+                break;
+            case "funcionario":
+                Optional<FuncionarioAduana> funcionario = funcionarioRepo.findByRutAndPassword(rut, password);
+                if (funcionario.isPresent()) {
+                    return ResponseEntity.ok(Map.of("rol", "funcionario"));
+                }
+                break;
+            case "viajero":
+                Optional<Viajero> viajero = viajeroRepo.findByRutAndPassword(rut, password);
+                if (viajero.isPresent()) {
+                    return ResponseEntity.ok(Map.of("rol", "viajero"));
+                }
+                break;
+            default:
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Rol inválido");
         }
 
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Credenciales inválidas");

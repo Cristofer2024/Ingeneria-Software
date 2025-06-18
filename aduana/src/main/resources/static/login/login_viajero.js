@@ -21,18 +21,18 @@ document.addEventListener("DOMContentLoaded", function () {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ rut, password })
+            body: JSON.stringify({ rut, password, rol: "viajero"})
         });
 
         if (response.ok) {
-            const admin = await response.json(); // opcional
+            const viajero = await response.json(); // opcional
             Swal.fire({
                 title: "Bienvenido",
                 text: "Inicio de sesión exitoso",
                 icon: "success",
                 confirmButtonText: "Ir al panel"
             }).then(() => {
-                window.location.href = "../home/admin_home.html"; // Cambia por tu ruta real
+                window.location.href = "../home/viajero_home.html"; // Cambia por tu ruta real
             });
         } else if (response.status === 401) {
             Swal.fire("Credenciales incorrectas", "El RUT o la contraseña no coinciden.", "error");

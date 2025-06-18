@@ -6,4 +6,5 @@ import lombok.Data;
 public class LoginRequest {
     private String rut;
     private String password;
+    private String rol;
 }

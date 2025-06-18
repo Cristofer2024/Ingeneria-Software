@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     confirmButtonText: "Ir al inicio"
                 }).then(result => {
                     if (result.isConfirmed) {
-                        window.location.href = "../home/viajero.html";
+                        window.location.href = "../home/viajero_home.html";
                     }
                 });
                 form.reset();
