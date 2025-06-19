@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const password = document.getElementById("password").value.trim();
         const nivelAcceso = document.getElementById("nivelAcceso").value;
 
+
         // 1. Validación de campos
         if (!nombre || !rut || !email || !password || !nivelAcceso) {
             return Swal.fire("Campos incompletos", "Por favor completa todos los campos.", "warning");
@@ -32,13 +33,20 @@ document.addEventListener("DOMContentLoaded", function () {
             return Swal.fire("Contraseña débil", "Debe tener al menos 8 caracteres, una mayúscula, un número y un símbolo.", "warning");
         }
 
-        // 5. Validar que el RUT no esté duplicado
+        // 5. Validar que el RUT no esté duplicado en administradores
         const existe = await fetch(`/api/admin/buscarPorRut/${rut}`).then(res => res.json());
         if (existe) {
             return Swal.fire("RUT duplicado", "Ya existe un administrador con este RUT.", "error");
         }
 
-        // 6. Envío al backend
+        // 6 valida que el RUT no esté duplicado en funcionarios
+        const existe_funcionario = await fetch(`/api/funcionario_aduna/buscarPorRut/${rut}`).then(res => res.json());
+        if (existe_funcionario) {
+            return Swal.fire("RUT duplicado", "Ya existe un Funcionario con este RUT.", "error");
+        }
+        
+
+        // 7. Envío al backend
         const admin = { nombre, rut, email, password, nivelAcceso };
 
         fetch("/api/admin", {

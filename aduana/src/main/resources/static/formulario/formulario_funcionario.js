@@ -37,8 +37,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if (existe) {
             return Swal.fire("RUT duplicado", "Ya existe un funcionario con este RUT.", "error");
         }
+        
+        // 6. Validar que el RUT no esté duplicado en administradores
+        const existe_admin = await fetch(`/api/admin/buscarPorRut/${rut}`).then(res => res.json());
+        if (existe_admin) {
+            return Swal.fire("RUT duplicado", "Ya existe un administrador con este RUT.", "error");
+        }
 
-        // 6. Envío de datos al backend
+        // 7. Envío de datos al backend
         const funcionario = {
             nombre,
             rut,
