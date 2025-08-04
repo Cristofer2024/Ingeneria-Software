@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Documento Menor</title>
+  <link rel="stylesheet" href="formulario.css"/>
+</head>
+<body>
+  <div class="main-content">
+    <div class="container">
+      <img src="../imagenes/logo.png" alt="Logo Aduanas de Chile" class="logo"/>
+      <h2>Documento Menor</h2>
+      <form id="documentoMenor">
+        <label for="nombreMenor">Nombre del Menor:</label>
+        <input
+          type="text"
+          id="nombreMenor"
+          required
+          placeholder="Ej: Matías González"
+        />
+
+        <label for="edadMenor">Edad del Menor:</label>
+        <input
+          type="number"
+          id="edadMenor"
+          min="0"
+          required
+          placeholder="Ej: 12"
+        />
+
+        <label for="documentoIdentidad">Documento Identidad:</label>
+        <input
+          type="text"
+          id="documentoIdentidad"
+          required
+          placeholder="Ej: 12345678-9"
+        />
+
+        <label for="nombreRepresentante">Nombre del Representante:</label>
+        <input
+          type="text"
+          id="nombreRepresentante"
+          required
+          placeholder="Ej: Laura González"
+        />
+
+        <label for="parentesco">Parentesco:</label>
+        <input
+          type="text"
+          id="parentesco"
+          required
+          placeholder="Ej: Madre"
+        />
+
+        <label for="documentoAutorizacionAdjunto">
+          Autorización Notarial (PDF):
+        </label>
+        <small style="display:block; color:#002664; margin-top:4px; font-size:13px;">
+          Adjunte la autorización notarial o resolución judicial en formato PDF.
+        </small>
+        <input
+          type="file"
+          id="documentoAutorizacionAdjunto"
+          accept=".pdf"
+          required
+        />
+
+        <button type="submit" onclick="registrar()">Registrar</button>
+
+      </form>
+    </div>
+  </div>
+  <script src="documento-menor.js"></script>
+</body>
+</html>
